@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.ei.rest</groupId>
+	<artifactId>RestServerApp</artifactId>
+	<packaging>war</packaging>
+	<version>1.0</version>
+	<name>RestServerApp Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<jersey.server.version>1.19.4</jersey.server.version>
+		<jersey.servlet.version>1.19.4</jersey.servlet.version>
+	</properties>
+	<parent>
+		<groupId>com.ei.rest</groupId>
+		<artifactId>ParentPom</artifactId>
+		<version>1.0</version>
+		<relativePath>../ParentPom/pom.xml</relativePath>
+	</parent>
+
+ 	<dependencies>
+  	<!-- 	https://mvnrepository.com/artifact/com.sun.jersey/jersey-server -->
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>${jersey.server.version}</version>
+		</dependency>
+	<!-- 	https://mvnrepository.com/artifact/com.sun.jersey/jersey-servlet -->
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-servlet</artifactId>
+			<version>${jersey.servlet.version}</version>
+		</dependency>
+	<!-- 	https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
+	 -->	<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+ 	<!-- https://mvnrepository.com/artifact/com.sun.jersey/jersey-bundle -->
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-bundle</artifactId>
+			<version>1.19.4</version>
+		</dependency>
+
+
+	</dependencies>
+	<build>
+		<finalName>RestServerApp</finalName>
+	</build>
+</project>
